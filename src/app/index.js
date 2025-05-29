@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, TextInput, Pressable } from 'react-native';
 
 import { colors } from "@/constants/colors";
+import { Link } from 'expo-router';
 
 export default function Login() {
   return (
@@ -11,7 +12,7 @@ export default function Login() {
         </Text>
 
         <Text style={styles.slogan}>
-
+          Faça seu login
         </Text>
       </View>
       
@@ -37,6 +38,10 @@ export default function Login() {
         <Pressable style={styles.button}>
           <Text style={styles.buttonText}>Acessar</Text>
         </Pressable>
+
+        <Link href='/(auth)/signup/page' style={styles.link}>
+        <Text>Ainda não possui uma conta? Cadastre-se</Text>
+        </Link>
 
       </View>
 
@@ -101,5 +106,9 @@ const styles = StyleSheet.create({
     color: colors.white,
     fontSize: 16,
     fontWeight: 'bold'
+  },
+  link: {
+    marginTop: 16,
+    textAlign: 'center'
   }
 })
