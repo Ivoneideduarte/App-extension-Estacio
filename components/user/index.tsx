@@ -1,6 +1,6 @@
-import { View, StyleSheet, Text, Image } from 'react-native';
 import { colors } from '@/constants/colors';
 import { Feather } from '@expo/vector-icons';
+import { Image, StyleSheet, Text, View } from 'react-native';
 
 interface HeaderProps {
     name: String;

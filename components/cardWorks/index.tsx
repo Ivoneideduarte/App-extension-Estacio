@@ -1,7 +1,7 @@
+import User from '@/components/user';
 import { colors } from '@/constants/colors';
 import React from 'react';
-import { StyleSheet, Text, View,Image } from 'react-native';
-import User from '@/components/user'
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function Work(props: { data: { work: string | number | bigint | boolean | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null | undefined> | null | undefined; }; }) {
   return (

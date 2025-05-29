@@ -1,9 +1,9 @@
-import { colors } from "@/constants/colors";
-import Header from './../components/header'
-import { useState } from "react";
-import { FlatList, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import Work from './../components/cardWorks'
 import Calender from "@/components/calender";
+import { colors } from "@/constants/colors";
+import { useState } from "react";
+import { FlatList, StyleSheet, View } from "react-native";
+import Work from '../../components/cardWorks';
+import Header from '../../components/header';
 
 
 export default function Index() {

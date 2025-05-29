@@ -1,6 +1,6 @@
-import { Feather } from '@expo/vector-icons';
-import { SafeAreaView, StyleSheet, Text, TouchableOpacity, StatusBar } from 'react-native';
 import { colors } from '@/constants/colors';
+import { Feather } from '@expo/vector-icons';
+import { SafeAreaView, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 interface HeaderProps{
     user: String;
