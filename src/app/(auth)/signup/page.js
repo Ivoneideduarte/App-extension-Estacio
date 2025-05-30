@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import {
   View,
   Text,
@@ -13,7 +13,7 @@ import {
 import { colors } from "@/constants/colors";
 import { Link, router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import { supabase } from '../../../lib/supabase'
+
 
 export default function Signup() {
 
@@ -22,29 +22,14 @@ export default function Signup() {
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
 
-  async function handleSignUp() {
+   function handleSignUp() {
     console.log({
       name,
       email,
       password
     })
 
-    setLoading(true)
-
-    //Acessa o sistema de autenticação
-    const {} = await supabase.auth.signUp({
-      email: email,
-      password: password
-    })
-
-    if(error) {
-      Alert.alert('Error', error.message)
-      setLoading(false)
-      return
-    }
-
-    setLoading(false)
-    router.replace('/')
+    
   }
 
   return (
