@@ -4,6 +4,20 @@ import { colors } from "@/constants/colors";
 import { Link } from 'expo-router';
 
 export default function Login() {
+
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [loading, setLoading] = useState(false)
+
+  function handleSignIn() {
+    console.log({
+      name,
+      email,
+      password
+    })
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -15,7 +29,7 @@ export default function Login() {
           Faça seu login
         </Text>
       </View>
-      
+
       <View style={styles.form}>
 
         <View>
@@ -23,6 +37,8 @@ export default function Login() {
           <TextInput
             placeholder='Digite seu email...'
             style={styles.input}
+            value={email}
+            onChangeText={setEmail}
           />
         </View>
 
@@ -32,15 +48,17 @@ export default function Login() {
             placeholder='Digite sua senha...'
             style={styles.input}
             secureTextEntry
+            value={password}
+            onChangeText={setPassword}
           />
         </View>
 
-        <Pressable style={styles.button}>
+        <Pressable style={styles.button} onPress={handleSignIn} >
           <Text style={styles.buttonText}>Acessar</Text>
         </Pressable>
 
         <Link href='/(auth)/signup/page' style={styles.link}>
-        <Text>Ainda não possui uma conta? Cadastre-se</Text>
+          <Text>Ainda não possui uma conta? Cadastre-se</Text>
         </Link>
 
       </View>
@@ -78,7 +96,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 20,
     paddingTop: 24,
     paddingHorizontal: 14,
-    
+
   },
   label: {
     color: 'rgba(0,0,0,0.6)',
@@ -91,13 +109,13 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     paddingHorizontal: 8,
     paddingVertical: 14,
-  
+
   },
 
   button: {
     backgroundColor: colors.blue,
     paddingVertical: 14,
-    alignItems: 'center', 
+    alignItems: 'center',
     justifyContent: 'center',
     width: '100%',
     borderRadius: 8

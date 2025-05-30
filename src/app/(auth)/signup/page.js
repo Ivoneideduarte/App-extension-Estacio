@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   View,
   Text,
@@ -7,7 +8,7 @@ import {
   SafeAreaView,
   ScrollView
 } from 'react-native';
-import { useState } from 'react';
+
 import { colors } from "@/constants/colors";
 import { Link, router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
@@ -32,6 +33,7 @@ export default function Signup() {
 
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView style={{ flex: 1, backgroundColor: colors.white }}>
+        
         <View style={styles.container}>
           <View style={styles.header}>
 
